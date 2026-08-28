@@ -3,7 +3,7 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
+    values = ["bitnami-mariadb-*-x86_64-hvm-ebs-nami"]
   }
 
   filter {
@@ -11,7 +11,7 @@ data "aws_ami" "app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["979382823631"] # Bitnami
+  owners = ["679593333241"] # Bitnami
 }
 
 resource "aws_instance" "web" {
